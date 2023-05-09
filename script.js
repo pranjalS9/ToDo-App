@@ -45,6 +45,7 @@ function addtodom(task) {
 
   let checkbox = document.createElement("input");
   checkbox.setAttribute("type", "checkbox");
+  checkbox.style.cursor = "pointer";
   if (task.status === "completed") {
     checkbox.checked = true;
     spantext.style.textDecoration = "line-through";
@@ -67,6 +68,7 @@ function addtodom(task) {
   img.setAttribute("width", "15px");
   img.setAttribute("height", "15px");
   img.setAttribute("margin", "100px");
+  img.style.cursor = "pointer";
   img.addEventListener("click", function (event) {
     tasklist.removeChild(event.target.parentNode);
     tasks = tasks.filter(function (obj) {
